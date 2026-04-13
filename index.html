@@ -3134,8 +3134,8 @@
             .portfolio-tag { font-size: 10px !important; }
             .portfolio-title { font-size: 13px !important; }
             .profile-body p { font-size: 15px !important; }
-            .profile-name { font-size: 71px !important; }
-            .profile-role { font-size: 17px !important; }
+            .profile-name { font-size: 47px !important; }
+            .profile-role { font-size: 12px !important; }
             .proof-card p { font-size: 14px !important; }
             .proof-icon { font-size: 17px !important; }
             .result-box p { font-size: 15px !important; }
@@ -3604,7 +3604,7 @@
     </section>
 
     <!-- Resume Modal -->
-    <div id="resume-modal-overlay" onclick="closeResumeModal(event)">
+    <div id="resume-modal-overlay" style="display:none;" onclick="closeResumeModal(event)">
       <div id="resume-modal-box">
         <button class="rm-close" onclick="closeResumeModal(null,true)" aria-label="Close">&times;</button>
 
@@ -8030,13 +8030,15 @@ document.querySelectorAll('.jd-nav-item').forEach(item => {
     function openResumeModal(e) {
         if (e) e.preventDefault();
         showCoverLetter();
-        document.getElementById('resume-modal-overlay').classList.add('open');
+        var overlay = document.getElementById('resume-modal-overlay');
+        overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
         document.querySelector('.nav-links').classList.remove('show');
     }
     function closeResumeModal(e, force) {
-        if (force || (e && e.target === document.getElementById('resume-modal-overlay'))) {
-            document.getElementById('resume-modal-overlay').classList.remove('open');
+        var overlay = document.getElementById('resume-modal-overlay');
+        if (force || (e && e.target === overlay)) {
+            overlay.style.display = 'none';
             document.body.style.overflow = '';
         }
     }
@@ -8082,7 +8084,8 @@ document.querySelectorAll('.jd-nav-item').forEach(item => {
         if (e.key === 'Escape') {
             closeToolModal(e, true);
             closeVideoModal(e, true);
-            closeResumeModal(null, true);
+            document.getElementById('resume-modal-overlay').style.display = 'none';
+            document.body.style.overflow = '';
         }
     });
 
