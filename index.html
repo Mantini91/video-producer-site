@@ -133,29 +133,27 @@
         }
 
         .nav-resume {
-            border: 1.5px solid var(--book-cloth);
             color: var(--book-cloth) !important;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            transition: opacity 0.2s ease !important;
+        }
+        .nav-resume:hover {
+            color: var(--book-cloth) !important;
+            opacity: 0.7;
+        }
+        .nav-cta {
+            background: var(--book-cloth);
+            color: var(--ivory) !important;
             padding: 8px 20px;
             border-radius: 4px;
             font-weight: 600;
             letter-spacing: 0.04em;
             transition: all 0.2s ease !important;
         }
-        .nav-resume:hover {
-            background: var(--book-cloth);
-            color: var(--ivory) !important;
-        }
-        .nav-cta {
-            background: var(--book-cloth);
-            color: var(--ivory) !important;
-            padding: 10px 24px;
-            border-radius: 100px;
-            font-weight: 600;
-            transition: all 0.3s ease !important;
-        }
 
         .nav-cta:hover {
-            background: var(--book-cloth);
+            opacity: 0.88;
             transform: translateY(-1px);
         }
 
@@ -1947,10 +1945,10 @@
                 padding-bottom: 24px;
             }
             .profile-name {
-                font-size: 48px;
+                font-size: 47px;
             }
             .profile-role {
-                font-size: 13px;
+                font-size: 12px;
                 letter-spacing: 0.1em;
             }
             .profile-body-section {
@@ -1966,10 +1964,10 @@
                 width: 32%;
             }
             .profile-name {
-                font-size: 36px;
+                font-size: 35px;
             }
             .profile-role {
-                font-size: 11px;
+                font-size: 10px;
                 letter-spacing: 0.09em;
             }
         }
@@ -2240,7 +2238,7 @@
                 right: 0;
                 background: var(--ivory);
                 border-bottom: 1px solid rgba(0,0,0,0.08);
-                padding: 8px 0 16px;
+                padding: 8px 0 20px;
                 z-index: 9999;
                 box-shadow: 0 8px 24px rgba(0,0,0,0.08);
             }
@@ -2252,21 +2250,27 @@
             .nav-links.show li a {
                 display: block;
                 padding: 12px 24px;
-                font-size: 15px;
+                font-size: 14px;
                 color: var(--slate-dark);
                 border-bottom: none;
             }
 
             .nav-links.show li a.nav-resume {
-                margin: 8px 24px 4px;
-                padding: 10px 20px;
-                text-align: center;
                 display: block;
+                margin: 0;
+                padding: 12px 24px;
+                text-align: left;
+                border: none !important;
+                border-radius: 0;
+                box-sizing: border-box;
             }
             .nav-links.show li a.nav-cta {
-                margin: 8px 24px 0;
-                padding: 10px 20px;
+                display: block;
+                margin: 4px 24px 8px;
+                padding: 12px 20px;
                 text-align: center;
+                border-radius: 4px;
+                box-sizing: border-box;
             }
 
             .mobile-toggle {
@@ -2284,13 +2288,13 @@
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 32px; letter-spacing: -1px; }
-            h2 { font-size: 26px; letter-spacing: -0.5px; }
-            .hero-hook { font-size: 28px; letter-spacing: -0.8px; }
-            .hero-insight { font-size: 22px; margin-top: 32px; }
-            .hero-identity { font-size: 22px; margin-top: 6px; }
+            h1 { font-size: 31px; letter-spacing: -1px; }
+            h2 { font-size: 25px; letter-spacing: -0.5px; }
+            .hero-hook { font-size: 27px; letter-spacing: -0.8px; }
+            .hero-insight { font-size: 21px; margin-top: 32px; }
+            .hero-identity { font-size: 21px; margin-top: 6px; }
             .hero-divider { margin-top: 36px; }
-            .hero-sub { margin-top: 24px; font-size: 15px; }
+            .hero-sub { margin-top: 24px; font-size: 14px; }
             .hero-scroll { display: flex; }
         }
 
@@ -2930,7 +2934,7 @@
                 padding: 28px 24px;
             }
             .edge-summary-bar p {
-                font-size: 13px;
+                font-size: 12px;
                 margin-bottom: 0;
             }
             .edge-summary-bar .flow-text {
@@ -2938,7 +2942,7 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
-                font-size: 17px;
+                font-size: 16px;
                 width: 100%;
             }
             .edge-summary-bar .flow-sep {
@@ -3004,6 +3008,184 @@
                 padding: 12px;
             }
         }
+
+        /* ===== MOBILE FONT SIZE REDUCTION (-1px) ===== */
+        @media (max-width: 900px) {
+            #jd-app { font-size: 13px !important; }
+            .close-signature { font-size: 19px !important; }
+            .closer-text { font-size: 16px !important; }
+            .component-item span { font-size: 13px !important; }
+            .cta-button { font-size: 15px !important; }
+            .diag-arrow { font-size: 25px !important; }
+            .diag-col h3 { font-size: 23px !important; }
+            .diag-col p { font-size: 14px !important; }
+            .diag-stage { font-size: 10px !important; }
+            .edge-intro .edge-statement { font-size: 19px !important; }
+            .edge-intro p { font-size: 19px !important; }
+            .edge-summary-bar .flow-text { font-size: 17px !important; }
+            .edge-summary-bar p { font-size: 13px !important; }
+            .engine-arrow { font-size: 23px !important; }
+            .engine-step { font-size: 15px !important; }
+            .flow-arrow { font-size: 27px !important; }
+            .flow-box { font-size: 17px !important; }
+            .hero-badge { font-size: 12px !important; }
+            .hero-scroll { font-size: 11px !important; }
+            .jarvis-btn { font-size: 11px !important; }
+            .jarvis-card-dates { font-size: 9px !important; }
+            .jarvis-card-meta { font-size: 9px !important; }
+            .jarvis-card-tag { font-size: 9px !important; }
+            .jarvis-card-title { font-size: 12px !important; }
+            .jarvis-col-count { font-size: 10px !important; }
+            .jarvis-col-header { font-size: 12px !important; }
+            .jarvis-subtitle { font-size: 12px !important; }
+            .jarvis-title { font-size: 21px !important; }
+            .jd-account-avatar { font-size: 15px !important; }
+            .jd-account-desc { font-size: 11px !important; }
+            .jd-account-name { font-size: 13px !important; }
+            .jd-account-username { font-size: 11px !important; }
+            .jd-at-risk-item { font-size: 12px !important; }
+            .jd-at-risk-item .jd-risk-status { font-size: 11px !important; }
+            .jd-avatar { font-size: 13px !important; }
+            .jd-badge { font-size: 11px !important; }
+            .jd-bar { font-size: 10px !important; }
+            .jd-bar-label { font-size: 12px !important; }
+            .jd-btn-action { font-size: 11px !important; }
+            .jd-btn-primary { font-size: 13px !important; }
+            .jd-btn-secondary { font-size: 12px !important; }
+            .jd-cal-bar { font-size: 8px !important; }
+            .jd-cal-day-cell { font-size: 11px !important; }
+            .jd-cal-filter { font-size: 10px !important; }
+            .jd-cal-legend-item { font-size: 10px !important; }
+            .jd-cal-month-nav .jd-cal-count { font-size: 11px !important; }
+            .jd-cal-month-nav .jd-cal-month-title { font-size: 17px !important; }
+            .jd-cal-month-nav .jd-cal-nav-btn { font-size: 11px !important; }
+            .jd-cal-toolbar .jd-btn-new { font-size: 12px !important; }
+            .jd-cal-toolbar .jd-btn-refresh { font-size: 12px !important; }
+            .jd-cal-toolbar .jd-cal-search { font-size: 12px !important; }
+            .jd-cal-weekday-cell { font-size: 10px !important; }
+            .jd-card-meta { font-size: 11px !important; }
+            .jd-card-title { font-size: 13px !important; }
+            .jd-category-badge { font-size: 9px !important; }
+            .jd-chart-title { font-size: 13px !important; }
+            .jd-column-header { font-size: 13px !important; }
+            .jd-contractor-bestfor { font-size: 8px !important; }
+            .jd-contractor-desc { font-size: 10px !important; }
+            .jd-contractor-tag { font-size: 9px !important; }
+            .jd-contractors-section .jd-subtitle { font-size: 12px !important; }
+            .jd-contractors-section h2 { font-size: 19px !important; }
+            .jd-cost-badge { font-size: 10px !important; }
+            .jd-cost-label { font-size: 11px !important; }
+            .jd-cost-value { font-size: 17px !important; }
+            .jd-date-line { font-size: 11px !important; }
+            .jd-footer-name { font-size: 13px !important; }
+            .jd-footer-role { font-size: 11px !important; }
+            .jd-legend-item { font-size: 11px !important; }
+            .jd-nav-item { font-size: 13px !important; }
+            .jd-page-subtitle { font-size: 13px !important; }
+            .jd-page-title { font-size: 31px !important; }
+            .jd-schedule-block { font-size: 9px !important; }
+            .jd-schedule-cell { font-size: 10px !important; }
+            .jd-schedule-label { font-size: 12px !important; }
+            .jd-search-input { font-size: 12px !important; }
+            .jd-select { font-size: 12px !important; }
+            .jd-stat-label { font-size: 11px !important; }
+            .jd-stat-sub { font-size: 10px !important; }
+            .jd-stat-value { font-size: 23px !important; }
+            .jd-sys-count { font-size: 11px !important; }
+            .jd-sys-filter { font-size: 11px !important; }
+            .jd-sys-search { font-size: 11px !important; }
+            .jd-sys-tag-overflow { font-size: 9px !important; }
+            .jd-sys-toolbar .jd-btn-new { font-size: 12px !important; }
+            .jd-sys-type-badge { font-size: 9px !important; }
+            .jd-system-date { font-size: 10px !important; }
+            .jd-system-desc { font-size: 11px !important; }
+            .jd-system-icon { font-size: 15px !important; }
+            .jd-system-title { font-size: 13px !important; }
+            .jd-tag { font-size: 10px !important; }
+            .jd-team-avatar { font-size: 15px !important; }
+            .jd-team-badge { font-size: 9px !important; }
+            .jd-team-contact { font-size: 11px !important; }
+            .jd-team-name { font-size: 13px !important; }
+            .jd-team-role { font-size: 10px !important; }
+            .jd-team-toolbar .jd-btn-new { font-size: 12px !important; }
+            .jd-team-toolbar .jd-btn-secondary { font-size: 12px !important; }
+            .jd-team-view-btn { font-size: 11px !important; }
+            .label { font-size: 11px !important; }
+            .metric-card h4 { font-size: 15px !important; }
+            .metric-card p { font-size: 13px !important; }
+            .mobile-toggle { font-size: 23px !important; }
+            .nav-links a { font-size: 13px !important; }
+            .nav-logo { font-size: 17px !important; }
+            .outcome-box h4 { font-size: 17px !important; }
+            .outcome-item .icon { font-size: 27px !important; }
+            .outcome-item p { font-size: 14px !important; }
+            .output-card .desc { font-size: 13px !important; }
+            .output-card .number { font-size: 31px !important; }
+            .ph-breadcrumb { font-size: 11px !important; }
+            .ph-card-badge { font-size: 8px !important; }
+            .ph-demo-badge { font-size: 10px !important; }
+            .ph-gradient-btn { font-size: 12px !important; }
+            .ph-hint { font-size: 11px !important; }
+            .ph-input { font-size: 12px !important; }
+            .ph-section-label { font-size: 10px !important; }
+            .portfolio-tag { font-size: 10px !important; }
+            .portfolio-title { font-size: 13px !important; }
+            .profile-body p { font-size: 15px !important; }
+            .profile-name { font-size: 71px !important; }
+            .profile-role { font-size: 17px !important; }
+            .proof-card p { font-size: 14px !important; }
+            .proof-icon { font-size: 17px !important; }
+            .result-box p { font-size: 15px !important; }
+            .rm-back-btn { font-size: 12px !important; }
+            .rm-close { font-size: 19px !important; }
+            .rm-contact { font-size: 11px !important; }
+            .rm-cta-btn { font-size: 13px !important; }
+            .rm-name { font-size: 35px !important; }
+            .rm-sec-head { font-size: 10px !important; }
+            .rm-subtitle { font-size: 12px !important; }
+            .system-card .subtitle { font-size: 13px !important; }
+            .system-card h4 { font-size: 17px !important; }
+            .system-card ul li { font-size: 13px !important; }
+            .system-card-icon { font-size: 17px !important; }
+            .system-list li { font-size: 15px !important; }
+            .systems-summary .flow-text { font-size: 17px !important; }
+            .systems-summary h3 { font-size: 19px !important; }
+            .systems-summary p { font-size: 13px !important; }
+            .tool-cap-item { font-size: 14px !important; }
+            .tool-cap-item .cap-icon { font-size: 10px !important; }
+            .tool-feature-info .tool-subtitle { font-size: 15px !important; }
+            .tool-feature-info > p { font-size: 16px !important; }
+            .tool-feature-info h3 { font-size: 31px !important; }
+            .tool-feature-tag { font-size: 11px !important; }
+            .tool-modal .screenshot-window { font-size: 14px !important; }
+            .tool-modal .screenshot-window > div:nth-child(2) > div:first-child { font-size: 14px !important; }
+            .tool-modal-close { font-size: 17px !important; }
+            .tool-preview-btn { font-size: 14px !important; }
+            .tool-two-col ul li { font-size: 12px !important; }
+            .tool-two-col-header { font-size: 10px !important; }
+            .tool-unlocks .tool-unlocks-label { font-size: 10px !important; }
+            .tool-unlocks ul li { font-size: 13px !important; }
+            .tool-unlocks ul li::before { font-size: 12px !important; }
+            .unlocks-box .label-sm { font-size: 10px !important; }
+            .unlocks-box ul li { font-size: 13px !important; }
+            .video-modal-close-btn { font-size: 19px !important; }
+            .video-modal-field-label { font-size: 10px !important; }
+            .video-modal-field-value { font-size: 14px !important; }
+            .video-modal-project-title { font-size: 21px !important; }
+            .viz-brief .vb-q { font-size: 91px !important; }
+            .viz-outcome .vo-miss { font-size: 43px !important; }
+            .viz-outcome .vo-q { font-size: 37px !important; }
+            .viz-translation .vt-loop::after { font-size: 23px !important; }
+            .week-label { font-size: 12px !important; }
+            .week-tasks li { font-size: 14px !important; }
+            .week-title { font-size: 21px !important; }
+            .window-title { font-size: 11px !important; }
+            document.querySelectorAll('.jd-view').forEach(view => { font-size: 12px !important; }
+            h4 { font-size: 19px !important; }
+            p { font-size: 17px !important; }
+            p.lead { font-size: 19px !important; }
+        }
+
         /* ===== RÉSUMÉ MODAL ===== */
         #resume-modal-overlay {
             display: none;
@@ -3021,7 +3203,7 @@
             background: #FAF8F5;
             border-radius: 8px;
             width: 100%;
-            max-width: 900px;
+            max-width: 1200px;
             margin: auto;
             position: relative;
             box-shadow: 0 32px 80px rgba(0,0,0,0.35);
@@ -3037,7 +3219,7 @@
         }
         .rm-close:hover { background: rgba(0,0,0,0.22); }
         /* Document shared styles */
-        .rm-doc { padding: 52px 56px 48px; }
+        .rm-doc { padding: 52px 80px 48px; }
         .rm-name {
             text-align: center; font-size: 36px; font-weight: 800;
             letter-spacing: 0.06em; color: #191919; margin: 0 0 6px;
@@ -3055,7 +3237,7 @@
         .rm-sig { font-weight: 700; margin-top: 28px !important; }
         /* Cover letter bottom CTA */
         .rm-cta-bar {
-            padding: 24px 56px 32px;
+            padding: 24px 80px 32px;
             border-top: 1px solid rgba(0,0,0,0.08);
             display: flex; justify-content: center;
         }
@@ -3100,7 +3282,7 @@
         @media (max-width: 600px) {
             .rm-doc { padding: 36px 24px 32px; }
             .rm-cta-bar { padding: 20px 24px 28px; }
-            .rm-name { font-size: 26px; }
+            .rm-name { font-size: 25px; }
             .rm-comp-grid { grid-template-columns: 1fr; gap: 14px; }
         }
     </style>
